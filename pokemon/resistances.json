@@ -1,0 +1,111 @@
+[
+  {
+    "TYPE": "Bug",
+    "resistances": [
+      "Fighting", "Ground", "Grass"
+    ]
+  },
+  {
+    "TYPE": "Dark",
+    "resistances": [
+      "Ghost", "Psychic", "Dark"
+    ]
+  },
+  {
+    "TYPE": "Dragon",
+    "resistances": [
+      "Fire", "Water", "Grass", "Electric"
+    ]
+  },
+  {
+    "TYPE": "Electric",
+    "resistances": [
+      "Flying", "Steel", "Electric"
+    ]
+  },
+  {
+    "TYPE": "Fairy",
+    "resistances": [
+      "Fighting", "Bug", "Dragon", "Dark"
+    ]
+  },
+  {
+    "TYPE": "Fire",
+    "resistances": [
+      "Bug", "Steel", "Fire", "Grass", "Ice"
+    ]
+  },
+  {
+    "TYPE": "Fighting",
+    "resistances": [
+      "Rock", "Bug", "Dark"
+    ]
+  },
+  {
+    "TYPE": "Flying",
+    "resistances": [
+      "Fighting", "Ground", "Bug", "Grass"
+    ]
+  },
+  {
+    "TYPE": "Ghost",
+    "resistances": [
+      "Normal", "Fighting", "Poison", "Bug"
+    ]
+  },
+  {
+    "TYPE": "Grass",
+    "resistances": [
+      "Ground", "Water", "Grass", "Electric"
+    ]
+  },
+  {
+    "TYPE": "Ground",
+    "resistances": [
+      "Poison", "Rock", "Electric"
+    ]
+  },
+  {
+    "TYPE": "Ice",
+    "resistances": [
+      "Ice"
+    ]
+  },
+  {
+    "TYPE": "Normal",
+    "resistances": [
+      "Ghost"
+    ]
+  },
+  {
+    "TYPE": "Poison",
+    "resistances": [
+      "Fairy",
+      "Grass"
+    ]
+  },
+  {
+    "TYPE": "Psychic",
+    "resistances": [
+      "Fighting", "Poison", "Grass", "Fairy"
+    ]
+  },
+  {
+    "TYPE": "Rock",
+    "resistances": [
+      "Normal", "Flying", "Poison", "Fire"
+    ]
+  },
+  {
+    "TYPE": "Steel",
+    "resistances": [
+      "Normal", "Flying", "Poison", "Rock", "Bug", "Steel", "Grass", "Psychic", "Ice", "Dragon", "Fairy"
+    ]
+  },
+  {
+    "TYPE": "Water",
+    "resistances": [
+      "Steel", "Fire", "Water", "Ice"
+    ]
+  }
+]

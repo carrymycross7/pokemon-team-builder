@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/types-standard.css"/>
+  <link rel="stylesheet" href="/selectize.css"/>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.js" integrity="sha512-pF+DNRwavWMukUv/LyzDyDMn8U2uvqYQdJN0Zvilr6DDo/56xPDZdDoyPDYZRSL4aOKO/FGKXTpzDyQJ8je8Qw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/machineboy2045-angular-selectize2/3.0.1/angular-selectize.js" integrity="sha512-69AHJXwUQGhq3zdwVLDKwzeCDheea1xK/M0YPgNKLsDRO/DQp8jw5Tn5XquLe4//luE+3BzvVnxy54DYcmbugA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+  <script src="lodash.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <!--    <script type="application/javascript" src="/battle-info.js"></script>-->
+  <script type="application/javascript" src="/battle-info.js"></script>
+  
+  <style>
+    section {
+      border-radius: 1em;
+      border: 0.0625em solid #dedede;
+      padding: 1.25em 1em 1em;
+      margin: 0 auto 1.25em;
+      position: relative;
+    }
+    
+    :where(h1, h2, h3) {
+      font-weight: 700;
+      text-align: center;
+    }
+
+    h2 {
+      background: #f0f0f0;
+      background: linear-gradient(0deg, rgba(246, 246, 246, 1) 50%, rgba(240, 240, 240, 1) 50%);
+      color: #4d6ad8;
+      font-size: 1.5em;
+      text-align: left;
+      display: inline-block;
+      margin: 0 0 0.5em;
+      position: absolute;
+      top: -0.75em
+    }
+  </style>
+
+</head>
+<body ng-app="pageApp" ng-controller="pageCtrl as vm">
+<h1>Main</h1>
+<!--<div class="col-xs-12">-->
+<!--  <div class="col-xs-6">-->
+<!--    <selectize-->
+<!--        ng-model="vm.pokemon_one.type_search"-->
+<!--        config="vm.pokemon_one.config"-->
+<!--        options='vm.pokemon_one.types'-->
+<!--    ></selectize>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="col-xs-12">-->
+<!--  <div class="col-xs-6">-->
+<!--    <selectize-->
+<!--        ng-model="vm.pokemon_two.type_search"-->
+<!--        config="vm.pokemon_two.config"-->
+<!--        options='vm.pokemon_two.types'-->
+<!--    ></selectize>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="col-xs-12">-->
+<!--  <div class="col-xs-6">-->
+<!--    <selectize-->
+<!--        ng-model="vm.pokemon_three.type_search"-->
+<!--        config="vm.pokemon_three.config"-->
+<!--        options='vm.pokemon_three.types'-->
+<!--    ></selectize>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="col-xs-12">-->
+<!--  <div class="col-xs-6">-->
+<!--    <selectize-->
+<!--        ng-model="vm.pokemon_four.type_search"-->
+<!--        config="vm.pokemon_four.config"-->
+<!--        options='vm.pokemon_four.types'-->
+<!--    ></selectize>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="col-xs-12">-->
+<!--  <div class="col-xs-6">-->
+<!--    <selectize-->
+<!--        ng-model="vm.pokemon_five.type_search"-->
+<!--        config="vm.pokemon_five.config"-->
+<!--        options='vm.pokemon_five.types'-->
+<!--    ></selectize>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="col-xs-12">-->
+<!--  <div class="col-xs-6">-->
+<!--    <selectize-->
+<!--        ng-model="vm.pokemon_six.type_search"-->
+<!--        config="vm.pokemon_six.config"-->
+<!--        options='vm.pokemon_six.types'-->
+<!--    ></selectize>-->
+<!--  </div>-->
+<!--</div>-->
+
+<section style="border-style: double">
+  <h2>Enemy Team</h2>
+  <div class="row">
+    <div class="col s2"> <img src="../img/pokeball.png" alt="Girl in a jacket" >
+      <selectize
+          ng-model="vm.pokemon_one.type_search"
+          config="vm.pokemon_one.config"
+          options='vm.pokemon_one.types'
+      ></selectize></div>
+    <div class="col s2"><img src="../img/pokeball.png" alt="Girl in a jacket" ><selectize
+        ng-model="vm.pokemon_two.type_search"
+        config="vm.pokemon_two.config"
+        options='vm.pokemon_two.types'
+    ></selectize></div>
+    <div class="col s2"><img src="../img/pokeball.png" alt="Girl in a jacket" ><selectize
+        ng-model="vm.pokemon_three.type_search"
+        config="vm.pokemon_three.config"
+        options='vm.pokemon_three.types'
+    ></selectize></div>
+    <div class="col s2"><img src="../img/pokeball.png" alt="Girl in a jacket" ><selectize
+        ng-model="vm.pokemon_four.type_search"
+        config="vm.pokemon_four.config"
+        options='vm.pokemon_four.types'
+    ></selectize></div>
+    <div class="col s2"><img src="../img/pokeball.png" alt="Girl in a jacket" ><selectize
+        ng-model="vm.pokemon_five.type_search"
+        config="vm.pokemon_five.config"
+        options='vm.pokemon_five.types'
+    ></selectize></div>
+    <div class="col s2"><img src="../img/pokeball.png" alt="Girl in a jacket" ><selectize
+        ng-model="vm.pokemon_six.type_search"
+        config="vm.pokemon_six.config"
+        options='vm.pokemon_six.types'
+    ></selectize></div>
+  </div>
+</section>
+
+<button class="btn btn-primary" ng-click="vm.getWeakness();vm.reveal();">Click Me!</button>
+<button class="btn btn-warning" ng-click="vm.getStrengths()">STRENGTHS</button>
+<button class="btn btn-warning" ng-click="vm.calculateWeakness()">Calculate Weaknesses</button>
+
+<script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>

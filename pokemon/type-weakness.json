@@ -1,0 +1,143 @@
+[
+  {
+    "TYPE": "Bug",
+    "WEAKNESS": [
+      "Fire",
+      "Flying",
+      "Rock"
+    ]
+  },
+  {
+    "TYPE": "Dark",
+    "WEAKNESS": [
+      "Bug",
+      "Fairy",
+      "Fighting"
+    ]
+  },
+  {
+    "TYPE": "Dragon",
+    "WEAKNESS": [
+      "Dragon",
+      "Fairy",
+      "Ice"
+    ]
+  },
+  {
+    "TYPE": "Electric",
+    "WEAKNESS": [
+      "Ground"
+    ]
+  },
+  {
+    "TYPE": "Fairy",
+    "WEAKNESS": [
+      "Poison",
+      "Steel"
+    ]
+  },
+  {
+    "TYPE": "Fire",
+    "WEAKNESS": [
+      "Ground",
+      "Rock",
+      "Water"
+    ]
+  },
+  {
+    "TYPE": "Fighting",
+    "WEAKNESS": [
+      "Fairy",
+      "Flying",
+      "Psychic"
+    ]
+  },
+  {
+    "TYPE": "Flying",
+    "WEAKNESS": [
+      "Electric",
+      "Ice",
+      "Rock"
+    ]
+  },
+  {
+    "TYPE": "Ghost",
+    "WEAKNESS": [
+      "Dark",
+      "Ghost"
+    ]
+  },
+  {
+    "TYPE": "Grass",
+    "WEAKNESS": [
+      "Bug",
+      "Fire",
+      "Flying",
+      "Ice",
+      "Poison"
+    ]
+  },
+  {
+    "TYPE": "Ground",
+    "WEAKNESS": [
+      "Grass",
+      "Ice",
+      "Water"
+    ]
+  },
+  {
+    "TYPE": "Ice",
+    "WEAKNESS": [
+      "Fighting",
+      "Fire",
+      "Rock",
+      "Steel"
+    ]
+  },
+  {
+    "TYPE": "Normal",
+    "WEAKNESS": [
+      "Fighting"
+    ]
+  },
+  {
+    "TYPE": "Poison",
+    "WEAKNESS": [
+      "Ground",
+      "Psychic"
+    ]
+  },
+  {
+    "TYPE": "Psychic",
+    "WEAKNESS": [
+      "Bug",
+      "Dark",
+      "Ghost"
+    ]
+  },
+  {
+    "TYPE": "Rock",
+    "WEAKNESS": [
+      "Fighting",
+      "Grass",
+      "Ground",
+      "Steel",
+      "Water"
+    ]
+  },
+  {
+    "TYPE": "Steel",
+    "WEAKNESS": [
+      "Fighting",
+      "Fire",
+      "Ground"
+    ]
+  },
+  {
+    "TYPE": "Water",
+    "WEAKNESS": [
+      "Electric",
+      "Grass"
+    ]
+  }
+]

@@ -1,0 +1,163 @@
+.bug {
+    background-color: #A8B820 !important;
+    background-image: none !important;
+    border-color: #6D7815 !important;
+    color: black !important;
+}
+.dark {
+    background-color: #705848 !important;
+    background-image: none !important;
+    border:1px solid #49392F !important;
+    color: #FFF !important;
+}
+.dragon {
+    background-color: #7038F8 !important;
+    background-image: none !important;
+    border:1px solid #A27DFA !important;
+    color: black !important;
+}
+.electric {
+    background-color: #F8D030 !important;
+    background-image: none !important;
+    border:1px solid #F8D030 !important;
+    color: #FFF !important;
+}
+.fairy {
+    background-color: #EE99AC !important;
+    background-image: none !important;
+    border:1px solid #9B6470 !important;
+    color: #FFF !important;
+}
+.fire {
+    background-color: #F08030 !important;
+    background-image: none !important;
+    border:1px solid #9C531F !important;
+    color: #FFF !important;
+}
+.fighting {
+    background-color: #C03028 !important;
+    background-image: none !important;
+    border:1px solid #7D1F1A !important;
+    color: #FFF !important;
+}
+.flying {
+    background-color: #A890F0 !important;
+    background-image: none !important;
+    border:1px solid #6D5E9C !important;
+    color: #FFF !important;
+}
+.grass {
+    background-color: #78C850 !important;
+    background-image: none !important;
+    border:1px solid #4E8234 !important;
+    color: #FFF !important;
+}
+.ghost {
+    background-color: #705898 !important;
+    background-image: none !important;
+    border:1px solid #493963 !important;
+    color: #FFF !important;
+}
+.ground {
+    background-color: #E0C068 !important;
+    background-image: none !important;
+    border:1px solid #927D44 !important;
+    color: #FFF !important;
+}
+.ice {
+    background-color: #98D8D8 !important;
+    background-image: none !important;
+    border:1px solid #638D8D !important;
+    color: #FFF !important;
+}
+.normal {
+    background-color: #A8A878 !important;
+    background-image: none !important;
+    border:1px solid #6D6D4E !important;
+    color: #FFF !important;
+}
+.water {
+    background-color: #6890F0 !important;
+    background-image: none !important;
+    border:1px solid #445E9C !important;
+    color: #FFF !important;
+}
+.poison {
+    background-color: #A040A0 !important;
+    background-image: none !important;
+    border:1px solid #682A68 !important;
+    color: #FFF !important;
+}
+.psychic {
+    background-color: #F85888 !important;
+    background-image: none !important;
+    border:1px solid #A13959 !important;
+    color: #FFF !important;
+}
+.rock {
+    background-color: #B8A038 !important;
+    background-image: none !important;
+    border:1px solid #786824 !important;
+    color: #FFF !important;
+}
+.steel {
+    background-color: #B8B8D0 !important;
+    background-image: none !important;
+    border:1px solid #787887 !important;
+    color: #FFF !important;
+}
+
+.bug  a {
+    border-left:1px solid #49392F !important;
+}
+.dark  a {
+    border-left:1px solid #49392F !important;
+}
+.dragon  a {
+    border-left:1px solid #A27DFA !important;
+}
+.electric  a {
+    border-left:1px solid #F8D030 !important;
+}
+.fairy  a {
+    border-left:1px solid #9B6470 !important;
+}
+.fire  a {
+    border-left:1px solid #9C531F !important;
+}
+.fighting  a {
+    border-left:1px solid #7D1F1A !important;
+}
+.flying  a {
+    border-left:1px solid #6D5E9C !important;
+}
+.grass  a {
+    border-left:1px solid #4E8234 !important;
+}
+.ghost  a {
+    border-left:1px solid #493963 !important;
+}
+.ground  a {
+    border-left:1px solid #927D44 !important;
+}
+.ice  a {
+    border-left:1px solid #638D8D !important;
+}
+.normal  a {
+    border-left:1px solid #6D6D4E !important;
+}
+.water  a {
+    border-left:1px solid #445E9C !important;
+}
+.poison  a {
+    border-left:1px solid #682A68 !important;
+}
+.psychic  a {
+    border-left:1px solid #A13959 !important;
+}
+.rock  a {
+    border-left:1px solid #786824 !important;
+}
+.steel  a {
+    border:1px solid #787887 !important;
+}

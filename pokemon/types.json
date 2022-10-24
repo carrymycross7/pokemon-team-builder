@@ -1,0 +1,56 @@
+[
+  {
+    "type": "Bug"
+  },
+  {
+    "type": "Dark"
+  },
+  {
+    "type": "Dragon"
+  },
+  {
+    "type": "Electric"
+  },
+  {
+    "type": "Fairy"
+  },
+  {
+    "type": "Fire"
+  },
+  {
+    "type": "Fighting"
+  },
+  {
+    "type": "Flying"
+  },
+  {
+    "type": "Grass"
+  },
+  {
+    "type": "Ghost"
+  },
+  {
+    "type": "Ground"
+  },
+  {
+    "type": "Ice"
+  },
+  {
+    "type": "Normal"
+  },
+  {
+    "type": "Water"
+  },
+  {
+    "type": "Poison"
+  },
+  {
+    "type": "Psychic"
+  },
+  {
+    "type": "Rock"
+  },
+  {
+    "type": "Steel"
+  }
+]
