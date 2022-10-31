@@ -1,0 +1,20 @@
+{
+  "name": "Pokemon Team Builder",
+  "short_name": "PTB",
+  "description": "Build your Pokemon team around your opponents weaknesses",
+  "start_url": "/ui/view/battle-info.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FF0000",
+  "dir": "ltr",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/ui/img/pokeball.png",
+      "type": "image/png",
+      "sizes": "172x173"
+    }
+  ]
+}
