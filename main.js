@@ -41,11 +41,25 @@ app.get("/home", function (req, res) {
     res.sendFile(path.join(__dirname+'/ui/view/battle-info.html'))
 });
 
+app.post('/add-type', async function (req, res) {
+    let new_type = req.body;
+    const snapshot = await db.collection('types').get();
+    let list = snapshot.docs.map(doc => doc.data());
+    
+    const col = await db.collection('types').doc('type').set(
+        new_type
+    );
+    
+    res.send(col);
+});
+
 app.get("/pokemon-strengths", function (req, res) {
     res.sendFile(path.join(__dirname+'/pokemon/strengths.json'))
 });
 /*
     Main call to get all types.
+    
+    Covers R in CRUD for Read
  */
 app.get("/pokemon-types", async function (req, res) {
     let type_list = JSON.parse(fs.readFileSync(path.join(__dirname+'/pokemon/types.json')));

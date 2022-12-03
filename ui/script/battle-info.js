@@ -1,5 +1,9 @@
 (function (window) {
     function pageCtrl ($scope, $http, $document) {
+        const URLS = {
+            ADD_TYPE: '../add-type'
+        };
+        
         var data = {
             found_weaknesses: [],
             selectize_inputs: {
@@ -194,6 +198,33 @@
             types: [],
             type_search: [],
         };
+        
+        const edit = {
+            _test: function () {
+                console.dir(this.new_type); // debug - remove
+            },
+            new_type: {
+                add: function () {
+                    let self = edit.new_type;
+                    let formatted_type = {
+                        name: self.name,
+                        resistances: self.resistances.split(","),
+                        strengths: self.strengths.split(","),
+                        weaknesses: self.weaknesses.split(","),
+                    }
+                    $http.post(URLS.ADD_TYPE, formatted_type)
+                        .then(function (resp){
+                            console.dir(resp.data); // debug - remove
+                        }, function (err){
+                            console.error(err);  // debug - remove TODO: Add modal error handling
+                        })
+                },
+                name: '',
+                resistances: '',
+                strengths: '',
+                weaknesses: ''
+            }
+        }
 
         /*
             Takes an array to be checked for duplicates.
@@ -390,6 +421,7 @@
 
         return {
             calculateWeakness,
+            edit,
             getStrengths,
             getWeakness,
             pokemon_one,

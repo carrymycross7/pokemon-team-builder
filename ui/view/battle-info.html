@@ -51,11 +51,45 @@
       position: absolute;
       top: -0.75em
     }
+    
+    .modal {
+      background-color: transparent !important;
+    }
+    
+    .z-depth-5, .modal {
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+    }
   </style>
 
 </head>
 <body ng-app="pageApp" ng-controller="pageCtrl as vm">
 <h1>Main</h1>
+<!-- Modal -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Add a new type</h4>
+    <form>
+      <div class="form-group">
+        <label for="nt_name">Name:</label>
+        <input ng-model="vm.edit.new_type.name" type="text" class="form-control" id="nt_name">
+      </div>
+      <div class="form-group">
+        <label for="nt_res">Resistances:</label>
+        <input placeholder="eg: Fire,Water (Must be comma separated)" ng-model="vm.edit.new_type.resistances" type="text" class="form-control" id="nt_res">
+      </div>
+      <div class="form-group">
+        <label for="nt_str">Strengths:</label>
+        <input placeholder="eg: Fire,Water (Must be comma separated)" ng-model="vm.edit.new_type.strengths" type="text" class="form-control" id="nt_str">
+      </div>
+      <div class="form-group">
+        <label for="nt_weak">Weaknesses:</label>
+        <input placeholder="eg: Fire,Water (Must be comma separated)" ng-model="vm.edit.new_type.weaknesses" type="text" class="form-control" id="nt_weak">
+      </div>
+      <button ng-click="vm.edit.new_type.add();" type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</div>
 <!--<div class="col-xs-12">-->
 <!--  <div class="col-xs-6">-->
 <!--    <selectize-->
@@ -151,6 +185,7 @@
 <section>
   <div class="row">
     <div class="col s2"><button class="btn btn-warning" ng-click="vm.calculateWeakness()">Calculate Weaknesses</button></div>
+    <div class="col s2"><button data-toggle="modal" data-target="#modal1" style="background-color: blue" class="btn" ng-click="vm.calculateWeakness()">Add New Type</button></div>
   </div>
 </section>
 
