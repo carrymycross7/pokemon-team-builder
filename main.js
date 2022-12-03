@@ -6,7 +6,8 @@ const body_parser = require('body-parser');
 const router = express.Router();
 const POKE_WEAKNESS = require("./api/sort-weakness");
 const MODIFY = require("./api/modify-types");
-const strengths = require('./pokemon/strengths.json')
+const strengths = require('./pokemon/strengths.json');
+const {db} = require('./firebase.js');
 global.appRoot = path.resolve(__dirname);
 
 app.use(express.static(path.join(__dirname,'ui/script')));
@@ -18,7 +19,7 @@ app.use(body_parser.json()); // support json encoded bodies
 app.use(body_parser.urlencoded({extended: true})); // support url-encoded bodies
 
 // send file when person hits the / in their url
-app.get("/", function (req, res) {
+app.get("/", async function (req, res) {
     res.sendFile(path.join(__dirname+'/ui/view/test.html'))
 });
 
@@ -46,8 +47,11 @@ app.get("/pokemon-strengths", function (req, res) {
 /*
     Main call to get all types.
  */
-app.get("/pokemon-types", function (req, res) {
+app.get("/pokemon-types", async function (req, res) {
     let type_list = JSON.parse(fs.readFileSync(path.join(__dirname+'/pokemon/types.json')));
+    const snapshot = await db.collection('types').get();
+    let list = snapshot.docs.map(doc => doc.data());
+    type_list.new_list = list; // adding our new list from firebase TODO: refactor UI to use firebase exclusively
     res.send(type_list);
 });
 
@@ -77,7 +81,7 @@ app.get("/hello", function (req, res) {
     res.send("hello! I am alive!!!!");
 });
 
-app.listen(8000, () => {
-    console.log("Server listening on port 8000")
+app.listen(8000, async () => {
+    console.log("Server listening on port 8000");
 });
 
