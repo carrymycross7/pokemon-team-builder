@@ -41,14 +41,49 @@ app.get("/home", function (req, res) {
     res.sendFile(path.join(__dirname+'/ui/view/battle-info.html'))
 });
 
+/*
+    Main call to creat new type
+    
+    Covers C in CRUD for Create
+ */
 app.post('/add-type', async function (req, res) {
     let new_type = req.body;
     const snapshot = await db.collection('types').get();
     let list = snapshot.docs.map(doc => doc.data());
     
-    const col = await db.collection('types').doc('type').set(
+    const col = await db.collection('types').doc(`${new_type.name}`).set(
         new_type
     );
+    
+    res.send(col);
+});
+
+/*
+    Main call to delete type
+    
+    Covers D in CRUD for Delete
+ */
+app.post('/remove-type', async function (req, res) {
+    let type = req.body;
+    const snapshot = await db.collection('types').get();
+    let list = snapshot.docs.map(doc => doc.data());
+    
+    const col = await db.collection('types').doc(`${type.name}`).delete();
+    
+    res.send(col);
+});
+
+/*
+    Main call to update a type
+    
+    Covers U in CRUD for Update
+ */
+app.post('/update-type', async function (req, res) {
+    let updated_type = req.body;
+    const snapshot = await db.collection('types').get();
+    let list = snapshot.docs.map(doc => doc.data());
+    
+    const col = await db.collection('types').doc(`${updated_type.name}`).update(updated_type);
     
     res.send(col);
 });
