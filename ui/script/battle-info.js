@@ -1,7 +1,9 @@
 (function (window) {
     function pageCtrl ($scope, $http, $document) {
         const URLS = {
-            ADD_TYPE: '../add-type'
+            ADD_TYPE: '../add-type',
+            REMOVE_TYPE: '../remove-type',
+            UPDATE_TYPE: '../update-type'
         };
         
         var data = {
@@ -213,6 +215,39 @@
                         weaknesses: self.weaknesses.split(","),
                     }
                     $http.post(URLS.ADD_TYPE, formatted_type)
+                        .then(function (resp){
+                            console.dir(resp.data); // debug - remove
+                        }, function (err){
+                            console.error(err);  // debug - remove TODO: Add modal error handling
+                        })
+                },
+                name: '',
+                resistances: '',
+                strengths: '',
+                weaknesses: ''
+            },
+            remove_type: {
+                name: '',
+                remove: function () {
+                    $http.post(URLS.REMOVE_TYPE, {name: edit.remove_type.name})
+                        .then(function (resp){
+                            console.dir(resp.data); // debug - remove
+                        }, function (err){
+                            console.error(err);  // debug - remove TODO: Add modal error handling
+                        })
+                }
+            },
+            update_type: {
+                update: function () {
+                    let self = edit.update_type;
+                    let formatted_type = {
+                        name: self.name,
+                        resistances: self.resistances.split(","),
+                        strengths: self.strengths.split(","),
+                        weaknesses: self.weaknesses.split(","),
+                    };
+                    
+                    $http.post(URLS.UPDATE_TYPE, formatted_type)
                         .then(function (resp){
                             console.dir(resp.data); // debug - remove
                         }, function (err){
